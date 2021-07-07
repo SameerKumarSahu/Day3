@@ -11,27 +11,27 @@ public class EmpWageComputation {
 		int WagePerHour = 20;
 		int FulldayHour = 8;
 		int PartTimeHour = 8;
-                if (CheckAvail == 1){
-			int EmpFulldayWage =  WagePerHour * FulldayHour ;
+                switch  (CheckAvail) {
+		                case 0:
+		 			System.out.println("Employee is Absent " );
+					break;
 
-			System.out.println("Employee is Present and Employee fullday Wage is " + EmpFulldayWage);
-                }
+				case 1:
+                                         int EmpFulldayWage =  WagePerHour * FulldayHour ;
 
-                else if (CheckAvail == 2){
+                        		 System.out.println("Employee is Present and Employee fullday Wage is " + EmpFulldayWage);
+					 break;
 
-			int EmpHalfdayWage =  WagePerHour * PartTimeHour ;
+				case 2:
+					 int EmpHalfdayWage =  WagePerHour * PartTimeHour ;
 
-                         System.out.println("Employee is Present and Employee half day Wage is " + EmpHalfdayWage);
+		                         System.out.println("Employee is Present and Employee half day Wage is " + EmpHalfdayWage);
+					 break;
 
-                }
 
-		else {
+				}
 
-                        System.out.println("Employee is Absent " );
-
-		}
-
-	}
+        }
 
 
 }
